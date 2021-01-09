@@ -6,22 +6,23 @@ import {
 
 
 const Slider = (props) => {
+  console.log(props);
 
   return (
     <div>
         <Carousel>
           {
-            props.items.map(item=> 
+            props.items.map((item,index)=> 
               (
-                <Carousel.Item>
+                <Carousel.Item key={index}>
                   <img
                     className="d-block w-100"
-                    src={item.img}
+                    src={item.image}
                     alt="First slide"
                   />
                   <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h3>{item.caption.heading}</h3>
+                    <p>{item.caption.desc}</p>
                   </Carousel.Caption>
                 </Carousel.Item>
             ))

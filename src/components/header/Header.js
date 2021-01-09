@@ -4,6 +4,8 @@ import {
   Nav,
 } from 'react-bootstrap';
 
+import {  Link } from 'react-router-dom';
+
 
 const Header = () => {
 
@@ -14,10 +16,14 @@ const Header = () => {
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse style={{fontSize:20}}  id="basic-navbar-nav">
       <Nav className="ml-auto">
-        <Nav.Link className="d-flex justify-content-center" href="#home">Home</Nav.Link>
-        <Nav.Link className="d-flex justify-content-center" href="#services">Services</Nav.Link>
-        <Nav.Link className="d-flex justify-content-center" href="#services">About Us</Nav.Link>
-        <Nav.Link className="d-flex justify-content-center" href="#services">Contact Us</Nav.Link>
+        <Nav.Link className="d-flex justify-content-center" >
+          <Link to="/"> Home </Link>
+        </Nav.Link>
+        <Nav.Link className="d-flex justify-content-center" >
+          <Link to="/services"> Services </Link>
+        </Nav.Link>
+        <Nav.Link className="d-flex justify-content-center" >About Us</Nav.Link>
+        <Nav.Link className="d-flex justify-content-center" >Contact Us</Nav.Link>
       </Nav>
     </Navbar.Collapse>
       </Navbar>
